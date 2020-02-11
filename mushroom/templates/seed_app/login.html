@@ -1,0 +1,18 @@
+{% extends 'seed_app/base.html' %}
+{% load staticfiles %}
+	
+	{% block log_block %}
+	<div class='container'>
+		<div class = 'jumbotron' style="text-align: center;">
+			<h4>Login to start enjoying full access to gameconnect.com</h4><br>
+			<form method = 'post'>
+				{% csrf_token %}
+				<label for="username">Username:</label><br>
+				<input type="text" name="username"><br>
+				<label for="password">Password:</label><br>
+				<input type="password" name="password"><br><br>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</div>
+	{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'arcade_app/base.html' %}
+	{% block games_block %}
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		div.butts{
+			padding: 15px;
+		}
+		button.container{
+			text-align:center;
+			width: 45%;
+			height: 300px;
+			float: left;
+			margin-top: 5%;
+			background-color: #D71A21;
+			border-radius: 20px;
+			outline: none;
+			display: inline;
+			font-size: 50px;
+		}
+		button.container.right{
+			background-color: purple;
+			float: right;
+		}
+		button.container.right.emra{
+			background-color: #D71A21;
+		}
+		button.container.pip{
+			background-color: purple;
+		}
+		button.next:hover{
+			background-color: orange;
+		}
+	</style>
+	<div class ="butts">
+		<a href="{% url 'arcade_app:connect_four' %}"><button class = "container next">Connect Four</button></a>
+		<a href="{% url 'arcade_app:knots_and_crosses' %}"><button class = "container next right">Knots and crosses</button></a>
+		<a href=""><button class = "container pip next">Purple</button></a>
+		<a href=""><button class = "next container right emra">Coming Soon</button></a>
+		<a href=""><button class='next container'>This</button></a>
+		<a href=""><button class = "container next right">Coming Soon</button></a>
+	</div>
+	{% endblock %}

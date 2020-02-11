@@ -1,0 +1,13 @@
+{% extends 'connect_app/base.html' %}
+	{% block talk_block %}
+	<div class='container'>
+		<h1>People Serch Coming Soon!</h1>
+		<br>
+		<form method="post">
+			{% csrf_token %}
+			<label for="username">Username:</label>
+			<input type="text" name="username" placeholder="e.g. BigBird123">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	{% endblock %}

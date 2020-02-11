@@ -1,0 +1,15 @@
+{% extends 'seed_app/base.html' %}
+{% load staticfiles %}
+
+	{% block log_block %}
+	<div class ="container">
+		<div class='jumbotron'>
+			<form method='post'>
+				{% csrf_token %}
+				{{ user_form.as_p }}
+				{{ profile_form.as_p }}
+				<input type="submit" value="Register!" style="font-size: 20px;">
+			</form>
+		</div>
+	</div>
+	{% endblock %}
